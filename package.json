@@ -1,0 +1,29 @@
+{
+  "name": "blog_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nken3820/studyNojs.git"
+  },
+  "keywords": [
+    "blog_Nodejs"
+  ],
+  "author": "nken",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nken3820/studyNojs/issues"
+  },
+  "homepage": "https://github.com/nken3820/studyNojs#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
