@@ -1,0 +1,100 @@
+@import 'variables';
+
+
+// header
+
+.container_header,
+.container_footer {
+    width: $with-header;
+    margin: 0 auto;
+}
+
+.container_header .logo_header {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.logo_header .left_logo {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+.logo_header .right_logo {
+    position: relative;
+}
+
+.container_header .navbar-custom {
+    background-color: $root-color !important;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: $while-color;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: $while-color;
+}
+
+.dropdown-custom {
+    background-color: $bg-hover-nav-item;
+}
+
+.dropdown-item-custom {
+    color: $text-item-color;
+    font-size: $font-text;
+}
+.navbar-custom .btn-custom {
+    background-color: $while-color;
+    color: $black-color;
+}
+
+.navbar-custom .btn-custom:active {
+    background-color: $root-color;
+}
+
+.container-body {
+    width: $with-header;
+    margin: $height-space auto;
+}
+
+// body
+
+
+
+
+// footer
+
+.container_footer {
+    font-size: 15px;
+    padding: 0;
+}
+
+.container_footer .container-right {
+    background-color: $root-color;
+    color: $while-color;
+
+}
+
+.container_footer .copyright {
+ background-color: $bg-hover-nav-item;
+ color: $while-color;
+ margin-top: -16px;
+ padding: 1px 0;
+}
+
+.list-icons {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-icon {
+    margin-top: 20px;
+}
+
+.item-icon a {
+    color: $while-color;
+    font-size: 25px;
+}
