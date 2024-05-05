@@ -1,6 +1,5 @@
 @import 'variables';
 
-
 // header
 
 .container_header,
@@ -61,9 +60,6 @@
 
 // body
 
-
-
-
 // footer
 
 .container_footer {
@@ -74,14 +70,13 @@
 .container_footer .container-right {
     background-color: $root-color;
     color: $while-color;
-
 }
 
 .container_footer .copyright {
- background-color: $bg-hover-nav-item;
- color: $while-color;
- margin-top: -16px;
- padding: 1px 0;
+    background-color: $bg-hover-nav-item;
+    color: $while-color;
+    margin-top: -16px;
+    padding: 1px 0;
 }
 
 .list-icons {
