@@ -1,1 +1,16 @@
-<h1>hello worlk</h1>
+<div class="mt-4">
+    <div class="row">
+        {{#each posts}}
+        <div class="col-sm-6 col-lg-4 card-container">
+            <div class="card card-items" style="width: 18rem;">
+              <img src="{{this.image}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">{{this.header}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
