@@ -1,1 +1,71 @@
-<h1>news</h1>
+<div class="container-custom">
+    <div style="width: 100%;">
+        <nav style="--bs-breadcrumb-divider: '>'; width: 100%; margin-bottom:20px; margin-top:-20px" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="http://localhost:3000/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">News</li>
+          </ol>
+        </nav>
+        <div style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        ">
+            <div class="container-content">
+
+                <div class="detail-head">
+                    <h3>
+                        {{post.title}}
+                    </h3>
+
+                    <div class="d-flex justify-content-between time-control">
+                        <span class="time">{{post.createdAT}}
+                        </span>
+
+                        <div class="control log">
+
+                            <span>Cỡ chữ:&nbsp;</span>
+                            <span><i class="fa fa-minus-square-o" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-plus-square-o" aria-hidden="true"></i></span>
+                            <span><i class="fa fa-adjust" aria-hidden="true"></i>&nbsp;Tương phản</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="desc">
+                    <br><h5>{{post.header}}</h5>
+                </div>
+
+                <div class="content-detail" id="content">
+                    <br><p style="text-align:justify;">{{post.details_post}}</p>
+                </div>
+
+
+                <div class="email-print" >
+                    <ul class="list-email-print">
+                        <li class="email" onclick="sendMail(true);"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>&nbsp; Gửi mail</span></li>
+                        <li class="print" onclick="javascript:expandingWindow(urlPrint);"><i class="fa fa-print" aria-hidden="true"></i><span>&nbsp; In</span> </li>
+                        <li class="fbshare" onclick="faceBookShare();"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;<span>Facebook</span> </li>
+                        <li class="tweetershare" onclick="twitterShare();"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;<span>Twitter</span> </li>
+                    </ul>
+                </div>
+
+                <ul class="new-related" id="new-related" style="list-style: none;">
+                    <h4>CÁC TIN ĐÃ ĐĂNG</h4>
+                    {{#each posts}}
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i>
+                        <a href="{{this.slug}}">{{this.title}}</a>
+                        <br><span>{{this.createdAT}}</span>
+                    </li>
+                    {{/each}}
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+

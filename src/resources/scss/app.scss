@@ -64,7 +64,8 @@
     margin-top: 16px;
 }
 
-.card-container {
+.card-container,
+.container-custom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,4 +102,20 @@
 .item-icon a {
     color: $while-color;
     font-size: 25px;
+}
+
+// news
+
+.container-content {
+    width: 850px;
+}
+
+.list-email-print {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+}
+
+.list-email-print li {
+    margin: 0 10px;
 }
