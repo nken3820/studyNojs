@@ -6,6 +6,12 @@ const { TRUE } = require('node-sass');
 const app = express();
 const port = 3000;
 
+const session = require('express-session');
+const passport = require('passport');
+const flash = require('connect-flash');
+
+require('./config/passport');
+
 const methodOverride = require('method-override');
 
 const db = require('./config/db');
@@ -27,6 +33,19 @@ app.use(morgan('combined'));
 
 // override with POST having ?_method=?
 app.use(methodOverride('_method'));
+
+//
+app.use(
+    session({
+        secret: 'adsa897adsa98bs',
+        resave: false,
+        saveUninitialized: false,
+    }),
+);
+
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Template engine
 app.engine('hbs', handlebars.engine({ extname: '.hbs' }));

@@ -119,3 +119,16 @@
 .list-email-print li {
     margin: 0 10px;
 }
+
+// login
+
+.container-login {
+    // background-color: aqua;
+}
+
+.container-custom-login {
+    height: 450px;
+    padding: 60px;
+    background-color: $root-color;
+    color: $while-color;
+}
