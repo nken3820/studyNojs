@@ -7,6 +7,7 @@ router.get('/create', newsController.create);
 router.post('/store', newsController.store);
 router.get('/:id/edit', newsController.edit);
 router.put('/:id', newsController.update);
+router.delete('/:id', newsController.delete);
 router.get('/:slug', newsController.show);
 
 module.exports = router;
