@@ -12,7 +12,6 @@ class NewsController {
             ),
         ])
             .then(([posts, post]) => {
-                // Truyền dữ liệu vào hàm render
                 res.render('news/show', {
                     posts: posts,
                     post: post,
@@ -33,6 +32,26 @@ class NewsController {
         post.save()
             .then(() => res.redirect('/'))
             .catch((error) => {});
+    }
+
+    //[Get] /news/:id/edit
+    edit(req, res, next) {
+        Post.findById(req.params.id)
+            .then((posts) =>
+                res.render('news/edit', {
+                    posts: mongooseToObject(posts),
+                }),
+            )
+            .catch(next);
+    }
+
+    //[Put] /news/:id
+    update(req, res, next) {
+        Post.updateOne({ _id: req.params.id }, req.body)
+            .then(() => {
+                res.redirect('/me/stored/news');
+            })
+            .catch(next);
     }
 }
 

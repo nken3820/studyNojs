@@ -1,0 +1,28 @@
+<div class="mt-4">
+  <h3 style="margin-bottom: 30px;">Cập nhập bài viết</h3>
+  <form method="POST" action="/news/{{posts._id}}?_method=PUT">
+    <div class="mb-3">
+      <label for="title" class="form-label">Tựa đề</label>
+      <input type="text" class="form-control" value="{{posts.title}}" id="title" name="title" />
+    </div>
+    <div class="mb-3">
+      <label for="header" class="form-label">Mở đầu</label>
+      <input type="text" class="form-control" value="{{posts.header}}" id="header" name="header" />
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Image</label>
+      <input type="url" class="form-control" value="{{posts.image}}" id="image" name="image" />
+    </div>
+    <div class="mb-3">
+      <label for="details_post">Chi tiết</label>
+      <textarea
+        id="details_post"
+        name="details_post"
+        class="form-control"
+        rows="18"
+        cols="94"
+      >{{posts.details_post}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu lại</button>
+  </form>
+</div>

@@ -6,6 +6,8 @@ const { TRUE } = require('node-sass');
 const app = express();
 const port = 3000;
 
+const methodOverride = require('method-override');
+
 const db = require('./config/db');
 
 // Connect db
@@ -22,6 +24,9 @@ app.use(express.json());
 
 // HTTP logger
 app.use(morgan('combined'));
+
+// override with POST having ?_method=?
+app.use(methodOverride('_method'));
 
 // Template engine
 app.engine('hbs', handlebars.engine({ extname: '.hbs' }));
